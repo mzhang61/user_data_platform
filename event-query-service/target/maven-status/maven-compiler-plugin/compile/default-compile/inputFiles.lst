@@ -1,0 +1,5 @@
+/Users/mmm/Documents/user_data_platform/event-query-service/src/main/java/com/atguigu/query/EventQueryApplication.java
+/Users/mmm/Documents/user_data_platform/event-query-service/src/main/java/com/atguigu/query/api/EventController.java
+/Users/mmm/Documents/user_data_platform/event-query-service/src/main/java/com/atguigu/query/api/dto/DlqItem.java
+/Users/mmm/Documents/user_data_platform/event-query-service/src/main/java/com/atguigu/query/api/dto/UserEventItem.java
+/Users/mmm/Documents/user_data_platform/event-query-service/src/main/java/com/atguigu/query/redis/RedisClient.java

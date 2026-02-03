@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <!-- Console appender -->
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{40} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Silence logback internal status messages -->
+  <statusListener class="ch.qos.logback.core.status.NopStatusListener"/>
+
+  <!-- Reduce noise: Kafka -->
+  <logger name="org.apache.kafka" level="WARN"/>
+  <logger name="org.apache.kafka.clients.admin.AdminClientConfig" level="ERROR"/>
+  <logger name="org.apache.kafka.clients.consumer.ConsumerConfig" level="ERROR"/>
+
+  <!-- Reduce noise: Flink -->
+  <logger name="org.apache.flink" level="WARN"/>
+  <logger name="org.apache.flink.runtime" level="WARN"/>
+  <logger name="org.apache.flink.connector" level="WARN"/>
+  <logger name="org.apache.flink.runtime.webmonitor" level="ERROR"/>
+
+  <!-- Reduce noise: Pekko (Flink RPC) -->
+  <logger name="org.apache.pekko" level="WARN"/>
+
+  <!-- ✅ Optional: hide this local-only token warning -->
+  <logger name="org.apache.flink.runtime.security.token.DefaultDelegationTokenManager" level="ERROR"/>
+
+  <!-- Your own code -->
+  <logger name="com.atguigu" level="INFO"/>
+
+  <!-- Root logger -->
+  <root level="INFO">
+    <appender-ref ref="CONSOLE"/>
+  </root>
+
+</configuration>

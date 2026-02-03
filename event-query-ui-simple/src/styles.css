@@ -1,0 +1,24 @@
+:root{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";color-scheme:light;}
+body{margin:0;background:#fafafa;color:#111}
+.container{max-width:1100px;margin:0 auto;padding:18px}
+.h1{font-size:22px;font-weight:700;margin:0 0 6px}
+.muted{color:#666;font-size:12px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.card{background:#fff;border:1px solid #e6e6e6;border-radius:12px;padding:14px;flex:1;min-width:320px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.card h2{font-size:14px;margin:0 0 10px}
+label{font-size:12px;color:#444;display:block;margin:8px 0 4px}
+input,select{width:100%;padding:10px;border:1px solid #ddd;border-radius:10px;font-size:13px;outline:none}
+input:focus{border-color:#999}
+.btn{padding:10px 12px;border-radius:10px;border:1px solid #ddd;background:#f6f6f6;cursor:pointer;font-size:13px}
+.btn:hover{background:#efefef}
+.btn.primary{background:#111;color:#fff;border-color:#111}
+.btn.primary:hover{background:#000}
+.btn.ghost{background:transparent}
+.btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.kv{display:flex;gap:10px;flex-wrap:wrap}
+.badge{font-size:12px;padding:3px 8px;border-radius:999px;border:1px solid #ddd;background:#f7f7f7}
+.badge.ok{border-color:#bde5bd;background:#f1fff1}
+.badge.bad{border-color:#f0b3b3;background:#fff2f2}
+pre{margin:10px 0 0;padding:12px;border-radius:12px;background:#0b1020;color:#d7e3ff;overflow:auto;max-height:340px;font-size:12px}
+small{color:#666}
+hr{border:none;border-top:1px solid #eee;margin:12px 0}

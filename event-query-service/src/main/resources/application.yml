@@ -1,0 +1,16 @@
+server:
+  port: 8088
+
+# App-level configuration
+app:
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:16379}
+    timeoutMs: ${REDIS_TIMEOUT_MS:2000}
+
+# Expose basic actuator endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

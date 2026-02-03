@@ -1,0 +1,32 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: event-collector
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:16379}
+
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:19092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+app:
+  idempotency:
+    ttl-seconds: 86400
+
+  kafka:
+    # Kafka topic for raw user events
+    topic: user-events-raw-v2
+
+    # Kafka topic for events that cannot be accepted/parsed/validated
+    dlq-topic: dlq-events
