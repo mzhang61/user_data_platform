@@ -3,13 +3,13 @@
 
 This project is a minimal end-to-end user behavior data pipeline:
 
-1) Frontend (React UI) or any client sends user events to **event-collector** via HTTP.
-2) event-collector publishes raw events to **Kafka** topic: `user-events-raw-v2`.
-3) **stream-processor** consumes Kafka events, validates them, and writes:
+
+1) event-collector publishes raw events to **Kafka** topic: `user-events-raw-v2`.
+2) **stream-processor** consumes Kafka events, validates them, and writes:
     - clean event -> Redis key `event:{eventId}`
     - user timeline index -> Redis ZSET `user:{userId}:events` (score = eventTimeMillis)
     - invalid event -> Redis List `dlq:events` AND Kafka topic `dlq-events`
-4) **event-query-service** reads Redis and provides query APIs for UI and curl testing.
+3) **event-query-service** reads Redis and provides query APIs for UI and curl testing.
 
 ---
 
